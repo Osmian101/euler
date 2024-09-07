@@ -12,7 +12,8 @@ def pyramid_print(input):
         if (x == i):
             print("")
             x = 0
-        i = i + 1
+            i = i + 1
+        
         x = x + 1
         # print("i: ", i)
         # print("x: ", x)
