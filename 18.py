@@ -2,6 +2,17 @@ input = [75], [95], [64], [17], [47], [82], [18], [35], [87], [10],[20], [4], [8
 
 def main():
     pyramid_print(input)
+    y = 0
+    mult = 0
+    for x in range(1, len(input)):
+        x = x * mult
+        
+        if x >= len(input):
+            print("Missed final entry")
+            return 0
+        else:
+            print(int(x), ': ', input[int(x)])
+        mult = mult + .5
 
 
 def pyramid_print(input):
