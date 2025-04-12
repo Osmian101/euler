@@ -2,14 +2,19 @@ input = [75], [95], [64], [17], [47], [82], [18], [35], [87], [10],[20], [4], [8
 
 def main():
     pyramid_print(input)
-    print("test commit with new user")
     y = 0
     mult = 0
+    # x = 1 -> left side
+    # x = 2 -> center
+    # x = 3 -> right side
     for x in range(1, len(input)):
         x = x * mult
         
-        if x >= len(input):
-            print("Missed final entry")
+        if x == len(input):
+            print("end of line")
+            return 1
+        elif x > len(input):
+            print("missed final entry")
             return 0
         else:
             print(int(x), ': ', input[int(x)])
