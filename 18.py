@@ -2,6 +2,7 @@ input = [75], [95], [64], [17], [47], [82], [18], [35], [87], [10],[20], [4], [8
 
 def main():
     pyramid_print(input)
+    print("test commit with new user")
     y = 0
     mult = 0
     for x in range(1, len(input)):
