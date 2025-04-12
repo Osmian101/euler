@@ -2,8 +2,19 @@ input = [75], [95], [64], [17], [47], [82], [18], [35], [87], [10],[20], [4], [8
 
 def main():
     pyramid_print(input)
-    y = 0
+    traverse(input)
+
+    print("row = x, y =") 
+
+def traverse(input):
+    y = -2 
+    # y = 0  -> left side
+    # y = -1 -> right side (with offset that wont matter)
+    # y = 1  -> left side +1 (not perfect)
+    # y = -2 -> right side -1 (capturing the end of input with
+    #   negative indicies at first
     mult = 0
+
     # x = 1 -> left side
     # x = 2 -> center
     # x = 3 -> right side
@@ -17,7 +28,7 @@ def main():
             print("missed final entry")
             return 0
         else:
-            print(int(x), ': ', input[int(x)])
+            print(int(x), ': ', input[int(x) + y])
         mult = mult + .5
 
 
